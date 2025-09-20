@@ -1,7 +1,10 @@
 //# matrix-multiplication
 #include<stdio.h>
+
 #define MOD 1000000007
+
 int main(){
+
     long long  a[2][2],n,base[2][2],temp[2][2],res[2][2];
     for (int i = 0; i < 2; i++)
     {
@@ -17,9 +20,12 @@ int main(){
     res[0][1] = res[1][0] = 0;
     printf ("How many tomes to multipy the matrix to itself. ");
     scanf("%lld",&n);
+    
    
    while (n > 0) {
+   
         if (n % 2 == 1) {
+        
             // res = res * base (mod MOD)
             temp[0][0] = (res[0][0]*base[0][0] % MOD + res[0][1]*base[1][0] % MOD) %MOD;
             temp[0][1] = (res[0][0]*base[0][1] % MOD + res[0][1]*base[1][1] % MOD) % MOD;
